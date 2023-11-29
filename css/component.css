@@ -1,0 +1,196 @@
+body,html{
+	height:100%;
+}
+.mainSlider{
+	position:relative;
+	width:100%;
+	height:100%;
+	text-align:center;
+	overflow:hidden;
+}
+.exhibition .column{
+	    float: left;
+    width: 33.33%;
+}
+.exhibition .column .exhibitionImage{
+	    position: relative;
+}
+.exhibition img{
+	width:100%;
+	height:auto;
+}
+
+
+.exhibition .text{
+  color:#333;
+  font-size: 20px;
+  padding: 16px 10px;
+}
+.exhibition  .exihibitpad{
+
+	padding-bottom:30px;
+}
+.exhibition{
+	margin-top:30px;
+}
+.exhibition .exhibitionImage {
+
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid #fff;
+}
+.exhibition .exhibitionImage:hover{
+	box-shadow:10px 10px 10px #6b6b6b;
+}
+.exhibition .info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 18, 69, .8);
+    top: 100%;
+    padding: 15px;
+    transition: all .3s ease;
+	text-align:center;
+}
+.exhibition .exhibitionImage:hover .info {
+	top: 80%
+}
+.exhibition .info .white{
+	font-size:18px;
+	    line-height: 1;
+}
+.exhibition .exhibitionImage:hover .info.open .toggle:after {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	opacity: 0
+}
+.exhibition .exhibitionImage:hover .info.open .toggle:before {
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	opacity: 1
+}
+.cbp-bislideshow {
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	position:static;
+	top: 0px;
+	left: 0px;
+	display:block;
+	z-index: -1;
+	padding: 0;
+	margin: 0;
+}
+
+.cbp-bislideshow li {
+	position: absolute;
+	width: 101%;
+	height: 101%;
+	top: -0.5%;
+	left: -0.5%;
+	opacity: 0;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+/* If background-size supported we'll add the images to the background of the li */
+
+.backgroundsize .cbp-bislideshow li {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+/* ...and hide the images */
+.backgroundsize .cbp-bislideshow li img {
+	display: none;
+}
+
+.cbp-bislideshow li img {
+	display: block;
+	width: 100%;
+}
+
+.cbp-bicontrols {
+	position: absolute;
+	width: 500px;
+	height: 100px;
+	margin: -50px 0 0 -150px;
+	top: 50%;
+	left: 40%;
+	color:#ffffff;
+}
+
+.cbp-bicontrols span {
+	float: left;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	cursor: pointer;
+}
+
+.cbp-bicontrols span:before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-family: 'entypo';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 100px;
+	font-size: 80px;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	opacity: 0.7;
+}
+
+.cbp-bicontrols span:hover:before {
+	opacity: 1;
+}
+
+.cbp-bicontrols span:active:before {
+	top: 2px;
+}
+
+span.cbp-biplay:before {
+	content: "\e002";
+}
+
+span.cbp-bipause:before {
+	content: "\e003";
+}
+
+span.cbp-binext:before {
+	content: "\e000";
+}
+
+span.cbp-biprev:before {
+	content: "\e001";
+}
+
+.cbp-bicontrols span.cbp-binext {
+	float: right;
+}
+
+/* Fallback */
+
+.no-js.no-backgroundsize .cbp-bislideshow li:first-child {
+	opacity: 1;
+}
+
+.no-js.backgroundsize .cbp-bislideshow li:first-child img {
+	display: block;
+}
+@media screen and (max-width: 767px){
+	.exhibition .info .white{
+	font-size: 16px;
+	}
+}
